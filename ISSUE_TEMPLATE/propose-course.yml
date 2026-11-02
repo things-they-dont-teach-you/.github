@@ -1,0 +1,49 @@
+name: Propose a new course you'd like to build
+description: Tell us about a course you want to write, before you start.
+title: "New course: "
+labels: ["new course"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Read the [staff-room](https://github.com/things-they-dont-teach-you/staff-room) guide
+        first; it explains how a course is put together.
+  - type: input
+    id: repo
+    attributes:
+      label: Proposed repository name
+      description: It should read naturally after the organisation name, for example `uk-tax` or `nutrition`.
+      placeholder: uk-tax
+    validations:
+      required: true
+  - type: input
+    id: country
+    attributes:
+      label: Country
+      description: Or "global" if it applies everywhere.
+    validations:
+      required: true
+  - type: textarea
+    id: outline
+    attributes:
+      label: Lesson outline
+      description: A rough list of lessons.
+    validations:
+      required: true
+  - type: textarea
+    id: sources
+    attributes:
+      label: Official sources you'll use
+      placeholder: https://www.gov.uk/income-tax-rates
+    validations:
+      required: true
+  - type: dropdown
+    id: reviewer
+    attributes:
+      label: Do you have a qualified professional who can review it?
+      options:
+        - Yes, me
+        - Yes, someone I know
+        - Not yet
+    validations:
+      required: true

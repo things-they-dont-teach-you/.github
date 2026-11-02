@@ -1,0 +1,27 @@
+name: Request a course
+description: Ask for a subject or country we don't cover yet.
+title: "Course request: "
+labels: ["course request"]
+body:
+  - type: input
+    id: subject
+    attributes:
+      label: Subject
+      placeholder: Tax, renting, voting, nutrition...
+    validations:
+      required: true
+  - type: input
+    id: country
+    attributes:
+      label: Country
+      description: Or "anywhere" if it's the same everywhere.
+      placeholder: South Africa
+    validations:
+      required: true
+  - type: textarea
+    id: why
+    attributes:
+      label: What would you want to learn?
+      description: What do you wish someone had explained to you?
+    validations:
+      required: true

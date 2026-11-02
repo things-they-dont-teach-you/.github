@@ -1,0 +1,36 @@
+name: Offer to review lessons (professionals)
+description: Tax practitioners, financial advisers, dietitians, doctors and other professionals who can check lessons in their field.
+title: "Reviewer: "
+labels: ["reviewer"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you. Issues are **public**, so don't post your phone number, email address or
+        registration number here. We'll reply on this issue. If you'd rather not post publicly,
+        use the [contact form](https://things-they-dont-teach-you.github.io/#contact) instead.
+  - type: input
+    id: field
+    attributes:
+      label: Your field
+      placeholder: Registered tax practitioner
+    validations:
+      required: true
+  - type: input
+    id: country
+    attributes:
+      label: Country you practise in
+    validations:
+      required: true
+  - type: input
+    id: body
+    attributes:
+      label: Professional or registration body
+      description: The body you're registered with, not your number.
+      placeholder: SAIT, SAICA, HPCSA...
+  - type: textarea
+    id: courses
+    attributes:
+      label: Which courses or topics could you review?
+    validations:
+      required: true

@@ -1,0 +1,38 @@
+name: Something is wrong or out of date
+description: Report a mistake, an outdated figure or a broken link in a lesson.
+title: "Fix: "
+labels: ["fix"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for helping keep the courses accurate. Please don't include personal details
+        such as ID numbers, tax numbers or account details; issues are public.
+  - type: input
+    id: lesson
+    attributes:
+      label: Which lesson or file?
+      placeholder: lessons/03-filing-your-return.md, or facts.md
+    validations:
+      required: true
+  - type: textarea
+    id: wrong
+    attributes:
+      label: What's wrong?
+      description: Quote the text if you can.
+    validations:
+      required: true
+  - type: textarea
+    id: correct
+    attributes:
+      label: What should it say?
+    validations:
+      required: true
+  - type: input
+    id: source
+    attributes:
+      label: Official source
+      description: A link to the official page that confirms the correct version.
+      placeholder: https://www.sars.gov.za/...
+    validations:
+      required: true
